@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100vh;
+  }
+
+body {
+    position: relative;
+    width: 100wh;
+}
+
+form div img {
+  @apply ml-6 mr-4
+}
+
+form div input {
+  @apply w-full h-[4rem] rounded-3xl
+}
+
+form div label {
+  @apply mr-5
+}
+
+

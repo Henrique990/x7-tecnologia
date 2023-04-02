@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" viewBox="0 0 26 24">
+  <g id="Grupo_131" data-name="Grupo 131" transform="translate(-381 -1678)">
+    <rect id="bg" width="26" height="24" rx="2" transform="translate(381 1678)" fill="#c009e3"/>
+    <g id="Icons" transform="translate(392.724 1683.724)">
+      <g id="Rounded" transform="translate(-7 -2)">
+        <g id="Navigation" transform="translate(0 0)">
+          <g id="_-Round-_-Navigation-_-arrow_forward_ios" data-name="-Round-/-Navigation-/-arrow_forward_ios">
+            <g id="Grupo_10" data-name="Grupo 10">
+              <path id="Path" d="M16.552,16.552H0V0H16.552Z" fill="none" fill-rule="evenodd" opacity="0.87"/>
+              <path id="_-Icon-Color" data-name="🔹-Icon-Color" d="M7.266,15.3a.862.862,0,0,0,1.221,0l5.731-5.731a.687.687,0,0,0,0-.972L8.486,2.866A.863.863,0,0,0,7.266,4.087l4.993,5-5,5A.86.86,0,0,0,7.266,15.3Z" transform="translate(-2.176 -0.811)" fill="#fff" fill-rule="evenodd"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
