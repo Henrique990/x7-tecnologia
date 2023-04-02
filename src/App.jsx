@@ -32,7 +32,7 @@ import bg2 from "./assets/Grupo de máscara 14.png";
 import celularBG from "./assets/Grupo de máscara 34.svg";
 import x72 from "./assets/Grupo 134.svg";
 import linha03 from "./assets/Vector 10.png";
-import kibana from "./assets/Kibana.svg";
+import kibana from "./assets/kibana.svg";
 import mongoDB from "./assets/mongo-db.svg";
 import netcore from "./assets/net-core.svg";
 import node from "./assets/node.svg";
