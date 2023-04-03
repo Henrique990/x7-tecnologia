@@ -1,4 +1,7 @@
 import React from "react";
+import { useState } from 'react';
+import { Link } from 'react-scroll'
+import data from "./data.json"
 
 import x7 from "./assets/x7-tecnologia.svg";
 import celular01 from "./assets/celular01.svg";
@@ -22,7 +25,7 @@ import verificado from "./assets/icons/verificado-rosa.svg"
 import fundo from "./assets/fundo-neon.svg";
 import estrela04 from "./assets/estrela04.svg";
 import linha1 from "./assets/Vector 5.png";
-import linha2 from "./assets/Vector 6.png";
+import linha2 from "./assets/icons/Vector 6.svg";
 import seta1 from "./assets/Grupo 130.svg";
 import seta2 from "./assets/Grupo 131.svg";
 import seta3 from "./assets/Grupo 132.svg";
@@ -48,6 +51,8 @@ import persona from "./assets/icons/persona.svg";
 import conversa from "./assets/icons/conversa.svg";
 import estrelax7 from "./assets/estrelax7.svg";
 import linha4 from "./assets/Vector 9.png";
+import whatsappRoxo from "./assets/whatsapp-roxo.svg";
+import bgFixed from "./assets/bg-celular-fixed.svg";
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
@@ -61,7 +66,7 @@ const Slide = () => {
             <div className="flex justify-center  w-1/2 font-montserrat text-white">
               <div className="ml-72">
                 <p className="uppercase mb-3">nossos serviços</p>
-                <p className="text-6xl mb-14">
+                <p className="text-7xl mb-14">
                   Desenvolvimento <br /> de
                   <span className="font-bold"> Aplicativos</span>
                 </p>
@@ -81,21 +86,21 @@ const Slide = () => {
       </SplideSlide>
       <SplideSlide className="h-[38rem]">
       <div className="flex justify-center items-center pb-14 overflow-hidden bg-gradient-to-br from-[#54074C] to-[#110710]">
-            <div className="flex justify-center w-1/2 font-montserrat text-white">
-              <div className="ml-72">
+            <div className="flex justify-center relative -top-10 w-1/2 font-montserrat text-white">
+              <div className="ml-48">
                 <p className="uppercase mb-3">nossos serviços</p>
-                <p className="text-6xl mb-14">
+                <p className="text-7xl mb-14">
                   Sistemas sob <br />
                   <span className="font-bold"> medida</span>
                 </p>
-                  <button className="hover:border-0 hover:bg-[#6D1BAC] pt-7 pb-7 pl-9 pr-9 uppercase border border-[#E8BCFF] rounded-3xl">fale com a gente</button>
+                  <button className="relative z-50 hover:border-0 hover:bg-[#6D1BAC] pt-7 pb-7 pl-9 pr-9 uppercase border border-[#E8BCFF] rounded-3xl">fale com a gente</button>
               </div>
             </div>
             <div className="w-1/2 flex">
               <img className="relative right-36 top-20 z-50 h-[31.39rem]" src={notebook} alt="" />
               <img className="relative -top-52 right-80" src={linha03} alt="" />
               <img className="relative -top-36 right-[45rem]" src={estrela04} alt="" />
-              <img className="relative right-[150rem]" src={linha2} alt="" />
+              <img className="relative top-48 right-[210rem]" src={linha2} alt="" />
             </div>
         </div>
       </SplideSlide>
@@ -103,6 +108,54 @@ const Slide = () => {
   );
 };
 
+function FloatingContainer(props) {
+  const [showContainer, setShowContainer] = useState(false);
+
+  function handleClick() {
+    setShowContainer(true);
+  }
+
+  return (
+    <>
+        <button onClick={handleClick}>VER MAIS</button>
+      {showContainer && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-[#0B002B] bg-opacity-80 w-[84.5rem] h-[44.62rem] rounded-3xl p-8 relative">
+            <button
+              className="absolute top-10 right-14 text-white text-6xl font-light"
+              onClick={() => setShowContainer(false)}
+            >
+              X
+            </button>
+            <div className="flex mt-20 ml-24">
+              <div className="w-2/3 text-left space-y-8">
+                <h1 className="text-white text-5xl font-extrabold mb-4 ">{props.titulo}</h1>
+                <p className="text-white text-2xl mb-4 font-medium">
+                  {props.text1}
+                </p>
+                <p className="text-white text-2xl mb-4 font-light">
+                {props.text2}
+                </p>
+                <div>
+                  <button src="#" className="relative z-50 w-[21.25rem] h-[5.75rem] text-2xl font-bold bg-gradient-to-b from-custom-purple1 to-custom-purple2 text-white px-4 py-2 rounded-lg mr-4">
+                    FAÇA UM ORÇAMENTO
+                  </button>
+
+                </div>
+              </div>
+              <div className="w-1/3">
+                <div className="rounded-3xl ml-20 w-[15rem] h-[31.06rem] bg-gradient-to-b from-[#75319B] to-[#4C0087] hover:bg-purple-950">
+                  <img className="" src={bgFixed} alt="Imagem" />
+                </div>
+                <img className="animate-bounce relative -top-80 -right-9 w-[18.62rem] h-[15.42rem]" src={props.image} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
 
 const App = () => (
     <div className="w-full aspect-auto font-montserrat bg-white overflow-hidden">
@@ -115,19 +168,20 @@ const App = () => (
 
         <nav className="flex items-center gap-9 ml-32 mr-20 text-white text-xl">
           <div className="flex items-center h-16 hover:border-b-2 hover:text-[#A580FF] hover:border-[#A580FF]">
-            <a href="">Home</a>
+            <Link to="home" smooth={true} duration={500} 
+              className="hover:animate-bounce" href="">Home</Link>
           </div>
           <div className="flex items-center h-16 hover:border-b-2 hover:text-[#A580FF] hover:border-[#A580FF]">
-            <a href="">Serviços</a>
+            <Link to="services" smooth={true} duration={500} className="hover:animate-bounce" href="">Serviços</Link>
           </div>
           <div className="flex items-center h-16 hover:border-b-2 hover:text-[#A580FF] hover:border-[#A580FF]">
-            <a href="">Sobre a X7</a>
+            <Link to="abount" smooth={true} duration={500} className="hover:animate-bounce" href="">Sobre a X7</Link>
           </div>
           <div className="flex items-center h-16 hover:border-b-2 hover:text-[#A580FF] hover:border-[#A580FF]">
-            <a href="">Atuação</a>
+            <Link to="acting" smooth={true} duration={500} className="hover:animate-bounce" href="">Atuação</Link>
           </div>
           <div className="flex items-center h-16 hover:border-b-2 hover:text-[#A580FF] hover:border-[#A580FF]">
-            <a href="">Fale com a gente</a>
+            <Link to="speak" smooth={true} duration={500} className="hover:animate-bounce" href="">Fale com a gente</Link>
           </div>
         </nav>
 
@@ -136,7 +190,7 @@ const App = () => (
         </button>
       </header>
       {/* 2 */}
-      <section className="w-full h-custom-section1 pt-28">
+      <section id="home" className="w-full h-custom-section1 pt-28">
       <Slide />
 
 
@@ -152,13 +206,14 @@ const App = () => (
           </div> */}
       </section>
       {/* 3 */}
-      <section>
+      <section id="services">
         <div className="flex items-center justify-center mt-20 mb-11">
           <img src={barra} alt="" />
         </div>
         <p className="flex items-center justify-center text-xl uppercase text-[#0C5ADB]">o que fazemos</p>
         <p className="flex items-center justify-center text-6xl mb-28">
           Conheça nossos<span className="font-bold ml-5"> serviços</span>
+          <a href=""><img className="relative -right-[30rem] hover:animate-bounce" src={whatsappRoxo} alt="" /></a>
         </p>
         <div className="flex justify-center gap-1 mb-32">
           
@@ -170,12 +225,19 @@ const App = () => (
                 alt=""
               />
             </div>
-            <div className="p-4">
+            <div className="p-4 ml-3">
               <h4 className="text-3xl text-[#D909AE] font-semibold mb-2">Sistema Sob Medida</h4>
               <p>Sistemas sob medida lhes permite ter <span>soluções personalizadas para suas necessidades específicas de negócios.</span></p>
-              <div className="flex items-center">
-                <img className="w-6 h-6 mr-2" src={seta1} alt="" />
-                <p className="text-sm">ver serviço</p>
+              <div className="flex space-x-3 mt-28 text-lg text-[#9899A7]">
+                <div className="flex space-x-3">
+                  <img className="w-6 h-6" src={seta1} alt="" />
+                  <FloatingContainer 
+                    titulo = {data.map( data => data.titulo1)}
+                    text1 = {data.map( data => data.texto1)}
+                    text2 = {data.map( data => data["texto1-1"])}  
+                    image = {notebook}
+                  />
+                </div>
               </div>
             </div>
           </article>
@@ -184,12 +246,19 @@ const App = () => (
            <div className="bg-gradient-to-r from-custom-article1 to-custom-article2 h-[15.43rem] ">
               <img className="w-full h-full object-contain"src={celular01} alt="" />
            </div>
-           <div className="ml-4 mt-9">
+           <div className="ml-7 mt-9">
               <h4 className="mb-5 text-3xl font-semibold text-[#C009E3]">Aplicativos</h4>
               <p>O desenvolvimento de aplicativos oferece soluções personalizadas para as necessidades exclusivas de seus clientes, <span>criando aplicativos de alta qualidade para uma variedade e plataformas.</span></p>
-            <div>
+            <div className="flex space-x-3 mt-[4.3rem] text-base text-[#9899A7]">
+            <button className="flex space-x-3">
               <img src={seta2} alt="" />
-              <p>ver serviço</p>
+              <FloatingContainer 
+                titulo = {data.map( data => data.titulo2)}
+                text1 = {data.map( data => data.texto2)}
+                text2 = {data.map( data => data["texto2-2"])}
+                image = {celular01}
+              />
+            </button>
             </div>
            </div>
           </article>
@@ -198,12 +267,19 @@ const App = () => (
             <div className="bg-gradient-to-r from-custom-article1 to-custom-article2 h-[15.43rem] overflow-hidden rounded-t-3xl">
               <img src={outsourcing} alt="" />
             </div>
-            <div className="ml-4 mt-9">
+            <div className="ml-7 mt-9">
             <h4 className="mb-5 text-3xl font-semibold text-[#7403CB]">Outsourcing</h4>
-            <p>As empresas devem utilizar o serviço de outsourcing de tecnologia porque isso lhes permite acessar especialistas em diversas áreas de tecnologia, reduzir custos e manter o foco em suas atividades principais e estratégicas.</p>
-            <div>
+            <p>As empresas devem utilizar o <br /> serviço de outsourcing de <br /> tecnologia porque isso lhes <br /> permite acessar especialistas <br /> em diversas áreas de <br /> tecnologia, reduzir custos e <br /> manter o foco em suas atividades principais e <br /> estratégicas.</p>
+            <div className="flex space-x-3 mt-5 text-base text-[#9899A7]">
+            <button className="flex space-x-3 " href="">
               <img src={seta3} alt="" />
-              <p>ver serviço</p>
+              <FloatingContainer 
+                titulo = {data.map( data => data.titulo3)}
+                text1 = {data.map( data => data.texto3)}
+                text2 = {data.map( data => data["texto3-3"])}
+                image = {outsourcing}
+              />
+            </button>
             </div>
             </div>
           </article>
@@ -212,21 +288,28 @@ const App = () => (
             <div className="bg-gradient-to-r from-custom-article1 to-custom-article2 h-[15.43rem] overflow-hidden">
               <img className="" src={devOps} alt="" />
             </div>
-            <div className="ml-4 mt-9">
+            <div className="ml-7 mt-9">
             <h4 className="mb-5 text-3xl font-semibold text-[#0D09D9]">DevOps</h4>
             <p>Com o DevOps, as empresas podem reduzir o tempo de lançamento no mercado, melhorar a qualidade do software e reduzir custos operacionais.</p>
-            <div>
-              <img src={seta4} alt="" />
-              <p>ver serviço</p>
+            <div className="mt-[5.7rem] text-base text-[#9899A7]">
+              <button className="flex space-x-3 " href="">
+                <img src={seta4} alt="" />
+                <FloatingContainer 
+                  titulo = {data.map( data => data.titulo4)}
+                  text1 = {data.map( data => data.texto4)}
+                  text2 = {data.map( data => data["texto4-4"])}
+                  image = {devOps}
+              />
+              </button>
             </div>
             </div>
           </article>
         </div>
 
-        <div className="w-full flex justify-center relative z-10">
-        <div className="w-[75.75rem] h-[16rem] bg-black overflow-hidden border rounded-3xl">
+        <div className="w-full flex justify-center relative z-10 rounded-3xl">
+        <div className="w-[75.75rem] h-[16rem] bg-black overflow-hidden rounded-3xl">
           <div className="relative">
-            <img className="absolute" src={bg} alt="" />
+            <img className="absolute object-cover" src={bg} alt="" />
             <img className="absolute" src={bg2} alt="" />
           </div>
           <div className="flex relative text-white mt-[4.31rem] ml-[4.31rem]">
@@ -236,14 +319,14 @@ const App = () => (
               <p className="font-bold">Fale com a gente!</p>
             </div>
             <div className="">
-              <button className=" w-[19.68rem] h-[5.31rem] ml-[13rem] mt-4 border rounded-lg bg-gradient-to-r from-[#C009E3] to-[#4909E3]">faça um orçamento</button>
+              <button className="uppercase text-xl font-bold w-[19.68rem] h-[5.31rem] ml-[13rem] mt-4 border rounded-lg bg-gradient-to-r from-[#C009E3] to-[#4909E3]">faça um orçamento</button>
             </div>
           </div>
         </div>
         </div>
       </section>
       {/* 4 */}
-      <section className="relative -top-[12rem] bg-[#F2F2F9]">
+      <section id="abount" className="relative -top-[12rem] bg-[#F2F2F9]">
        <div className="flex items-center justify-center mt-20 mb-11">
           <img className="mt-48" src={barra} alt="" />
         </div>
@@ -329,7 +412,7 @@ const App = () => (
         </div> 
       </div>
       {/* 6 */}
-      <section>
+      <section id="acting">
         <div className="flex justify-center text-center relative -top-16">
           <img src={barra} alt="" />
         </div>
@@ -368,7 +451,7 @@ const App = () => (
         </div>
       </section>
       {/* 7 */}
-      <section className="bg-[#1C214A]">
+      <section id="speak" className="bg-[#1C214A]">
         <div className="flex justify-center ">
           <img className="mt-[4.71rem] mb-[4.61rem]" src={barra} alt="" />
         </div>
