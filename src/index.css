@@ -19,7 +19,7 @@
 * {
     margin: 0;
     padding: 0;
-    /* border: 1px solid red; */
+    /*border: 1px solid red;*/
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -41,7 +41,7 @@ form div img {
 }
 
 form div input {
-  @apply w-full h-[4rem] rounded-3xl
+  @apply w-full h-[4rem] rounded-xl
 }
 
 form div label {
