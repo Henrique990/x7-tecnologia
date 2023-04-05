@@ -56,6 +56,8 @@ import whatsappRoxo from "./assets/whatsapp-roxo.svg";
 import bgFixed from "./assets/bg-celular-fixed.svg";
 import bg03 from "./assets/bg03.svg";
 import whatsapp from "./assets/icons/whatsapp.png";
+import estrelax72 from "./assets/estrelax7-2.svg";
+import notebookpng from "./assets/Imagem 28.png";
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
@@ -64,7 +66,7 @@ import '@splidejs/splide/dist/css/splide.min.css';
 
 const Slide = () => {
   return (
-    <Splide options={{autoplay: true,interval: 3000, type: 'loop', perPage: 1  }}>
+    <Splide options={{autoplay: true,interval: 10000, type: 'loop', perPage: 1  }}>
       <SplideSlide>
       <div className="max-md:grid max-md:grid-cols-1 max-md:grid-rows-2 max-md:h-[680px] md:flex md:justify-center md:items-center overflow-hidden bg-custom-blue">
             <div className="max-md:row-start-2 flex justify-center w-1/2 font-montserrat text-white">
@@ -175,35 +177,35 @@ function FloatingContainer(props) {
     <>
         <button className="max-md:text-xs" onClick={handleClick}>VER MAIS</button>
       {showContainer && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-[#0B002B] bg-opacity-80 w-[84.5rem] h-[44.62rem] rounded-3xl p-8 relative">
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-30 flex justify-center items-center">
+          <div className="bg-[#0B002B] bg-opacity-90 w-[84.5rem] h-[50.62rem] rounded-3xl p-5 relative max-md:w-[23rem]">
             <button
-              className="absolute top-10 right-14 text-white text-6xl font-light"
+              className="absolute top-10 right-14 max-md:top-5 max-md:right-10 text-white text-6xl max-md:text-3xl font-light"
               onClick={() => setShowContainer(false)}
             >
               X
             </button>
-            <div className="flex mt-20 ml-24">
-              <div className="w-2/3 text-left space-y-8">
-                <h1 className="text-white text-5xl font-extrabold mb-4 ">{props.titulo}</h1>
-                <p className="text-white text-2xl mb-4 font-medium">
+            <div className="flex max-md:flex-col mt-10 max-md:mt-5 ml-24 max-md:ml-0">
+              <div className="md:w-2/3 max-md:w-full text-left space-y-8 max-md:space-y-4">
+                <h1 className="text-white text-5xl font-extrabold mb-4 max-md:text-2xl">{props.titulo}</h1>
+                <p className="text-white text-2xl max-md:text-base mb-4 font-medium">
                   {props.text1}
                 </p>
-                <p className="text-white text-2xl mb-4 font-light">
+                <p className="text-white text-2xl mb-4 font-light max-md:text-sm">
                 {props.text2}
                 </p>
                 <div>
-                  <button src="#" className="relative z-50 w-[21.25rem] h-[5.75rem] text-2xl font-bold bg-gradient-to-b from-custom-purple1 to-custom-purple2 text-white px-4 py-2 rounded-lg mr-4">
+                  <button src="#" className="relative z-50 w-[21.25rem] h-[5.75rem] max-md:w-[19rem] max-md:h-[4rem] text-2xl max-md:text-lg font-bold bg-gradient-to-b from-custom-purple1 to-custom-purple2 text-white px-4 py-2 rounded-lg mr-4 mt-5">
                     FAÇA UM ORÇAMENTO
                   </button>
 
                 </div>
               </div>
-              <div className="w-1/3">
-                <div className="rounded-3xl ml-20 w-[15rem] h-[31.06rem] bg-gradient-to-b from-[#75319B] to-[#4C0087] hover:bg-purple-950">
+              <div className="md:w-1/3 mt-12 max-md:pl-20 overflow-hidden">
+                <div className="rounded-3xl ml-20 max-md:ml-0 w-[15rem] h-[31.06rem] bg-gradient-to-b from-[#75319B] to-[#4C0087] hover:bg-purple-950 max-md:rotate-90 max-md:relative max-md:-top-8 max-md:w-[10rem] max-md:h-[18rem]">
                   <img className="" src={bgFixed} alt="Imagem" />
                 </div>
-                <img className="animate-bounce relative -top-80 -right-9 w-[18.62rem] h-[15.42rem]" src={props.image} alt="" />
+                <img className="md:animate-bounce relative -top-80 -right-9 max-md:-top-72 max-md:right-14 w-[18.62rem] h-[15.42rem] max-md:min-w-[15rem]" src={props.image} alt="" />
               </div>
             </div>
           </div>
@@ -231,7 +233,7 @@ const App = () => (
               to="home"
               smooth={true}
               duration={500}
-              className="hover:animate-bounce"
+              className=""
               href=""
             >
               Home
@@ -242,7 +244,7 @@ const App = () => (
               to="services"
               smooth={true}
               duration={500}
-              className="hover:animate-bounce"
+              className=""
               href=""
             >
               Serviços
@@ -253,7 +255,7 @@ const App = () => (
               to="abount"
               smooth={true}
               duration={500}
-              className="hover:animate-bounce"
+              className=""
               href=""
             >
               Sobre a X7
@@ -264,7 +266,7 @@ const App = () => (
               to="acting"
               smooth={true}
               duration={500}
-              className="hover:animate-bounce"
+              className=""
               href=""
             >
               Atuação
@@ -275,7 +277,7 @@ const App = () => (
               to="speak"
               smooth={true}
               duration={500}
-              className="hover:animate-bounce"
+              className=""
               href=""
             >
               Fale com a gente
@@ -284,7 +286,7 @@ const App = () => (
         </div>
       </nav>
 
-      <button className="ml-5 mr-5 hover:bg-gradient-to-r hover:from-custom-purple2 hover:to-custom-purple1 z-30 rounded-3xl border-[#707070] text-md xl:text-xl px-3 py-5 text-white bg-gradient-to-b from-custom-purple1 to-custom-purple2 hidden lg:block">
+      <button className="ml-5 mr-5 hover:bg-gradient-to-r hover:from-custom-purple2 hover:to-custom-purple1 z-30 rounded-3xl border-[#707070] text-md xl:text-base px-7 py-5 text-white bg-gradient-to-b from-custom-purple1 to-custom-purple2 hidden lg:block">
         PEÇA UM ORÇAMENTO
       </button>
     </header>
@@ -595,7 +597,8 @@ const App = () => (
       </p>
 
       <p className="flex justify-center text-center font-light text-2xl max-md:text-lg mb-20">
-        Veja algumas das ferramentas <br className="hidden max-md:block" /> que usamos na X7
+        Veja algumas das ferramentas <br className="hidden max-md:block" /> que
+        usamos na X7
       </p>
 
       <div className="flex justify-center mb-[12.83rem] max-md:mb-[7rem]">
@@ -654,7 +657,6 @@ const App = () => (
             </div>
           </div>
         </div>
-
       </div>
     </section>
     {/* 7 */}
@@ -702,7 +704,10 @@ const App = () => (
                 <span className="font-bold">receba um contato:</span>
               </p>
 
-              <form className="space-y-3 max-md:flex max-md:flex-col max-sm:pl-5 max-md:justify-center max-md:text-sm max-md:mt-8" action="">
+              <form
+                className="space-y-3 max-md:flex max-md:flex-col max-sm:pl-5 max-md:justify-center max-md:text-sm max-md:mt-8"
+                action=""
+              >
                 <div className="flex items-center overflow-hidden max-md:flex-col border-2 border-[#1C214A] rounded-2xl max-md:rounded-3xl w-[39.91rem] h-[4.78rem] max-md:w-[20rem] max-md:h-[4rem] max-md:ml-1">
                   <div className="max-md:flex max-md:mr-56 max-md:mt-2">
                     <img src={persona} alt="" />
@@ -737,7 +742,12 @@ const App = () => (
                       Fale um pouco sobre o que precisa:<span>(opcional)</span>
                     </label>
                   </div>
-                  <input className="bg-white h-[5.3rem] max-md:h-[5.7rem]" type="text" name="" id="" />
+                  <input
+                    className="bg-white h-[5.3rem] max-md:h-[5.7rem]"
+                    type="text"
+                    name=""
+                    id=""
+                  />
                 </div>
               </form>
 
@@ -749,8 +759,12 @@ const App = () => (
                   <img className="w-10" src={whatsapp} alt="" />
                 </div>
                 <div>
-                  <p className="text-white text-xl mb-3">ou se preferir conversa <br /> com a gente por</p>
-                  <a className="text-[#5d1869]" href="">CLIQUE AQUI</a>
+                  <p className="text-white text-xl mb-3">
+                    ou se preferir conversa <br /> com a gente por
+                  </p>
+                  <a className="text-[#5d1869]" href="">
+                    CLIQUE AQUI
+                  </a>
                 </div>
               </div>
             </div>
@@ -760,17 +774,20 @@ const App = () => (
     </section>
     {/* 8 */}
     <footer className="bg-[#12152E] pt-20">
-      <div className="flex justify-center gap-20 pb-9">
+      <div className="flex justify-center max-md:flex-col gap-20 max-md:gap-5 pb-9">
         <div>
-          <div className="mb-6">
+          <div className="md:hidden flex justify-center">
+            <img src={estrelax72} alt="" />
+          </div>
+          <div className="mb-6 max-md:hidden">
             <img src={estrelax7} alt="" />
           </div>
-          <p className="font-extralight text-xl text-[#908CB8] mb-7">
+          <p className="font-extralight text-xl text-[#908CB8] mb-7 max-md:hidden">
             Somos dedicados ao desenvolvimento de <br />
             soluções tecnológicas que atendam às <br />
             necessidades de seus clientes.{" "}
           </p>
-          <div className="flex gap-6">
+          <div className="flex gap-6 max-md:hidden">
             <img src={iconFacebook} alt="" />
             <img src={iconInstagram} alt="" />
             <img src={iconTwitter} alt="" />
@@ -778,7 +795,7 @@ const App = () => (
           </div>
         </div>
 
-        <div className="text-[#908CB8]">
+        <div className="text-[#908CB8] max-md:hidden">
           <p className="font-bold text-xl text-white mt-6 mb-6">Atuação</p>
 
           <div className="space-y-4">
@@ -800,7 +817,7 @@ const App = () => (
           </div>
         </div>
 
-        <nav className="text-[#908CB8]">
+        <nav className="text-[#908CB8] max-md:ml-14">
           <p className="font-bold text-xl text-white mt-6 mb-6">Menu</p>
           <div className="space-y-4">
             <div>
@@ -819,14 +836,14 @@ const App = () => (
               <a href="">Fale com a gente</a>
             </div>
           </div>
-          <a href="#">Home</a>
+          {/* <a href="#">Home</a>
           <a href="">Serviços</a>
           <a href="">Sobre a X7</a>
           <a href="">Atuação</a>
-          <a href="">Fale com a gente</a>
+          <a href="">Fale com a gente</a> */}
         </nav>
 
-        <div>
+        <div className="max-md:ml-14">
           <p className="font-bold text-xl text-white mt-6 mb-6">Contato</p>
 
           <div className="space-y-4  text-[#908CB8]">
@@ -845,8 +862,14 @@ const App = () => (
           </div>
         </div>
       </div>
+      <div className="md:hidden flex justify-center gap-5 border-t-2 pt-6 pb-8">
+        <img src={iconFacebook} alt="" />
+        <img src={iconInstagram} alt="" />
+        <img src={iconTwitter} alt="" />
+        <img src={iconLinkedin} alt="" />
+      </div>
       <div className="flex justify-center items-center border-t-2 border-[#E9E9E9]">
-        <p className="pt-11 pb-11 text-[#A5A8C9] text-xl">
+        <p className="pt-11 pb-11 text-[#A5A8C9] text-xl max-md:text-xs max-md:pt-5 max-md:pb-5">
           2023 Copyright X7 Tecnologia Todos os direitos reservados
         </p>
       </div>
