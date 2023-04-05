@@ -702,9 +702,9 @@ const App = () => (
                 <span className="font-bold">receba um contato:</span>
               </p>
 
-              <form className="space-y-3 max-md:flex max-md:flex-col max-md:justify-center max-md:text-sm max-md:mt-8" action="">
-                <div className="flex items-center max-md:flex-col border-2 border-[#1C214A] rounded-2xl w-[39.91rem] h-[4.78rem] max-md:w-[20rem] max-md:ml-1">
-                  <div className="max-md:flex">
+              <form className="space-y-3 max-md:flex max-md:flex-col max-sm:pl-5 max-md:justify-center max-md:text-sm max-md:mt-8" action="">
+                <div className="flex items-center overflow-hidden max-md:flex-col border-2 border-[#1C214A] rounded-2xl max-md:rounded-3xl w-[39.91rem] h-[4.78rem] max-md:w-[20rem] max-md:h-[4rem] max-md:ml-1">
+                  <div className="max-md:flex max-md:mr-56 max-md:mt-2">
                     <img src={persona} alt="" />
                     <label className="font-bold" htmlFor="nome">
                       Nome
@@ -712,8 +712,8 @@ const App = () => (
                   </div>
                   <input className="bg-white" type="text" name="name" id="" />
                 </div>
-                <div className="flex items-center max-md:flex-col border-2 border-[#1C214A] rounded-2xl w-[39.91rem] h-[4.78rem] max-md:w-[20rem] max-md:ml-1">
-                  <div className="max-md:flex">
+                <div className="flex items-center overflow-hidden max-md:flex-col border-2 border-[#1C214A] rounded-2xl max-md:rounded-3xl w-[39.91rem] h-[4.78rem] max-md:w-[20rem] max-md:h-[4rem] max-md:ml-1">
+                  <div className="max-md:flex max-md:mr-56 max-md:mt-2 ml-8">
                     <img src={mensagem} alt="" />
                     <label className="font-bold w-20" htmlFor="E-mail">
                       E-mail
@@ -721,8 +721,8 @@ const App = () => (
                   </div>
                   <input className="bg-white" type="email" />
                 </div>
-                <div className="flex items-center max-md:flex-col border-2 border-[#1C214A] rounded-2xl w-[39.91rem] h-[4.78rem] max-md:w-[20rem] max-md:ml-1">
-                  <div className="max-md:flex">
+                <div className="flex items-center overflow-hidden max-md:flex-col border-2 border-[#1C214A] rounded-2xl max-md:rounded-3xl w-[39.91rem] h-[4.78rem] max-md:w-[20rem] max-md:h-[4rem] max-md:ml-1">
+                  <div className="max-md:flex max-md:mr-56 max-md:mt-2 ml-6">
                     <img src={celular} alt="" />
                     <label className="font-bold" htmlFor="phone">
                       Telefone
@@ -730,27 +730,27 @@ const App = () => (
                   </div>
                   <input className="bg-white" type="number" />
                 </div>
-                <div className="flex flex-col items-center border-2 border-[#1C214A] rounded-2xl w-[39.91rem] h-[8.60rem] max-md:w-[20rem] max-md:ml-1">
+                <div className="flex flex-col max-md:overflow-hidden items-center border-2 border-[#1C214A] rounded-2xl max-md:rounded-3xl w-[39.91rem] h-[8.60rem] max-md:w-[20rem] max-md:ml-1">
                   <div className="max-md:flex">
                     <img src={conversa} alt="" />
                     <label className="font-bold" htmlFor="message">
                       Fale um pouco sobre o que precisa:<span>(opcional)</span>
                     </label>
                   </div>
-                  <input className="bg-white" type="text" name="" id="" />
+                  <input className="bg-white h-[5.3rem] max-md:h-[5.7rem]" type="text" name="" id="" />
                 </div>
               </form>
 
-              <button className="flex justify-center items-center mt-7 w-[39.91rem] h-[5.66rem] max-md:w-72 max-md:h-14 max-md:text-xl max-md:ml-4 bg-gradient-to-r from-custom-purple1 to-custom-purple2 text-white text-3xl uppercase font-semibold rounded-3xl">
+              <button className="flex justify-center items-center mt-7 w-[39.91rem] h-[5.66rem] max-md:w-72 max-md:h-14 max-md:text-xl max-md:ml-10 bg-gradient-to-r from-custom-purple1 to-custom-purple2 text-white text-3xl uppercase font-semibold rounded-2xl max-md:mb-9">
                 entre em contato
               </button>
-              <div className="md:hidden w-[23rem] h-[12rem] rounded-b-3xl bg-gradient-to-r from-custom-purple1 to-custom-purple2">
-                <div>
-                  <img src={whatsapp} alt="" />
+              <div className="md:hidden max-md:flex justify-center items-center w-[23rem] h-[10rem] rounded-b-3xl bg-gradient-to-r from-custom-purple1 to-custom-purple2">
+                <div className="mr-6">
+                  <img className="w-10" src={whatsapp} alt="" />
                 </div>
                 <div>
-                  <p>ou se preferir conversa com a gente por</p>
-                  <a href="">CLIQUE AQUI</a>
+                  <p className="text-white text-xl mb-3">ou se preferir conversa <br /> com a gente por</p>
+                  <a className="text-[#5d1869]" href="">CLIQUE AQUI</a>
                 </div>
               </div>
             </div>

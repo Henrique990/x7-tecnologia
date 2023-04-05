@@ -37,11 +37,11 @@ body {
 }
 
 form div img {
-  @apply ml-6 mr-4
+  @apply ml-6 mr-4 max-md:w-4
 }
 
 form div input {
-  @apply w-full h-[4rem] rounded-xl
+  @apply w-full h-[4.2rem] max-md:h-[1.7rem] rounded-xl
 }
 
 form div label {
