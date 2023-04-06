@@ -17,22 +17,25 @@ const LogosSlider = () => {
     const desktopOptions = {
       perPage: 5,
       autoplay: true,
-      interval: 2000,
+      interval: 20000,
       type: 'loop',
+      perMove: 1,
+      gap: "30px",
+      pagination: false,
     };
   
     const mobileOptions = {
       perPage: 2,
       autoplay: true,
-      interval: 2000,
+      interval: 20000,
       type: 'loop',
     };
   
     return (
-      <Splide options={window.innerWidth >= 800 ? desktopOptions : mobileOptions}>
+      <Splide className='' options={window.innerWidth >= 800 ? desktopOptions : mobileOptions}>
         {logos.map((logo) => (
-          <SplideSlide className='relative z-50 w-full mt-10 max-md:flex justify-center' key={logo.id}>
-            <img src={logo.src} alt={`Logo ${logo.id}`} />
+          <SplideSlide className='mt-10 ' key={logo.id}>
+            <img className='' src={logo.src} alt={`Logo ${logo.id}`} />
           </SplideSlide>
           
         ))}

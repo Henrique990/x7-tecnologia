@@ -48,4 +48,26 @@ form div label {
   @apply mr-5
 }
 
+/* Estilize as setas de navegação */
+.splide__arrow svg {
+  fill: white /* Defina a cor desejada */
+}
 
+.splide__arrow--next {
+    right: 0em;
+}
+
+.splide__arrow--prev {
+    left: 0em;
+}
+
+/* Estilize as setas de navegação quando estão desabilitadas 
+.splide__arrow--prev.splide__arrow--disabled,
+.splide__arrow--next.splide__arrow--disabled {
+  opacity: 0.5; /* Defina a opacidade desejada 
+} */
+
+.custom-slide {
+  margin-right: -10px; /* Defina a margem desejada */
+  margin-left: 50px; /* Defina a margem desejada */ 
+}

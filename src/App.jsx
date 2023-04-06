@@ -60,21 +60,26 @@ import estrelax72 from "./assets/estrelax7-2.svg";
 import notebookpng from "./assets/Imagem 28.png";
 import circulo from "./assets/icons/circulo.svg";
 
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+// import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import "@splidejs/splide/dist/css/splide.min.css";
+// import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+// import "@splidejs/splide/dist/css/splide.min.css";
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/splide/dist/css/splide.min.css'; // Importe o arquivo CSS da biblioteca Splide
 
 const Slide = () => {
 
-  const arrowStyle = {
+  const arrowstyle = {
     // Defina a cor das setas
-    color: 'fff'
+    color: '#e81212'
   }
 
   return (
+      
+    <div>
     <Splide
-      options={{ autoplay: true, interval: 1000000, type: "loop", perPage: 1, drag: true }}
+      options={{ autoplay: true, interval: 1000000, type: "loop", perPage: 1, arrowStyle:{arrowstyle}
+    }}
     >
       <SplideSlide>
         <div className="max-md:grid max-md:grid-cols-1 max-md:grid-rows-2 max-md:h-[680px] md:flex md:justify-center md:items-center overflow-hidden bg-custom-blue">
@@ -165,6 +170,8 @@ const Slide = () => {
         </div>
       </SplideSlide>
     </Splide>
+  
+    </div>
   );
 };
 
