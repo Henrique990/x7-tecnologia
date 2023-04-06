@@ -1,8 +1,8 @@
 import React from "react";
-import { useState } from 'react';
-import { Link } from 'react-scroll'
-import data from "./data.json"
-import LogosSlider from './logosSlider';
+import { useState } from "react";
+import { Link } from "react-scroll";
+import data from "./data.json";
+import LogosSlider from "./logosSlider";
 
 import x7 from "./assets/x7-tecnologia.svg";
 import celular01 from "./assets/celular01.svg";
@@ -22,7 +22,7 @@ import iconInstagram from "./assets/icons/instagram.png";
 import iconLinkedin from "./assets/icons/linkedin.png";
 import estrela03 from "./assets/estrela03.svg";
 import barra from "./assets/icons/barra-rosa.svg";
-import verificado from "./assets/icons/verificado-rosa.svg"
+import verificado from "./assets/icons/verificado-rosa.svg";
 import fundo from "./assets/fundo-neon.svg";
 import estrela04 from "./assets/estrela04.svg";
 import linha1 from "./assets/Vector 5.png";
@@ -34,7 +34,7 @@ import seta4 from "./assets/Grupo 133.svg";
 import bg from "./assets/bg.png";
 import bg2 from "./assets/Grupo de máscara 14.png";
 import celularBG from "./assets/Grupo de máscara 34.svg";
-import x72 from "./assets/Grupo 134.svg";
+import x72 from "./assets/icons/Grupo 110.png";
 import linha03 from "./assets/Vector 10.png";
 import kibana from "./assets/kibana.svg";
 import mongoDB from "./assets/mongo-db.svg";
@@ -58,66 +58,119 @@ import bg03 from "./assets/bg03.svg";
 import whatsapp from "./assets/icons/whatsapp.png";
 import estrelax72 from "./assets/estrelax7-2.svg";
 import notebookpng from "./assets/Imagem 28.png";
+import circulo from "./assets/icons/circulo.svg";
 
-import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-import '@splidejs/splide/dist/css/themes/splide-default.min.css';
-import '@splidejs/splide/dist/css/splide.min.css';
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import "@splidejs/splide/dist/css/splide.min.css";
 
 const Slide = () => {
+
+  const arrowStyle = {
+    // Defina a cor das setas
+    color: 'fff'
+  }
+
   return (
-    <Splide options={{autoplay: true,interval: 10000, type: 'loop', perPage: 1  }}>
+    <Splide
+      options={{ autoplay: true, interval: 1000000, type: "loop", perPage: 1, drag: true }}
+    >
       <SplideSlide>
-      <div className="max-md:grid max-md:grid-cols-1 max-md:grid-rows-2 max-md:h-[680px] md:flex md:justify-center md:items-center overflow-hidden bg-custom-blue">
-            <div className="max-md:row-start-2 flex justify-center w-1/2 font-montserrat text-white">
-              <div className="ml-48 md:ml-72">
-                <p className="max-md:text-xs uppercase mb-3">nossos serviços</p>
-                <p className="text-4xl md:text-7xl mb-14">
-                  Desenvolvimento <br /> de
-                  <span className="font-bold"> Aplicativos</span>
-                </p>
-                  <button className="relative z-50 hover:border-0 hover:bg-[#6D1BAC] pt-7 pb-7 pl-9 pr-9 uppercase border border-[#E8BCFF] rounded-3xl">fale com a gente</button>
+        <div className="max-md:grid max-md:grid-cols-1 max-md:grid-rows-2 max-md:h-[680px] md:flex md:justify-center md:items-center overflow-hidden bg-custom-blue">
+          <div className="max-md:row-start-2 flex justify-center md:w-1/2 font-montserrat text-white">
+            <div className="ml-0 md:ml-72">
+              <p className="max-md:text-xs uppercase mb-3">nossos serviços</p>
+              <p className="text-4xl md:text-7xl mb-14">
+                Desenvolvimento <br /> de
+                <span className="font-bold"> Aplicativos</span>
+              </p>
+              <div className="max-md:border max-md:rounded-md max-md:w-[17.3rem]">
+              <button className="relative z-50 max-md:flex max-md:justify-center max-md:items-center md:border hover:border-1 md:hover:bg-[#6D1BAC] max-md:bg-violet-800 pt-7 pb-7 pl-9 pr-9 uppercase max-md:border-none border-[#E8BCFF] rounded-3xl max-md:rounded-md max-md:m-2 max-md:w-64 max-md:h-14">
+                fale com a gente
+              </button>
               </div>
             </div>
-            <div className="w-1/2 flex">
-              <img className="relative max-md:-top-24 max-md:-right-40 -right-20 z-50 h-[32.78rem]" src={celular01} alt="" />
-              <img className="relative -top-28 right-10" src={fundo} alt="" />
-              <img className="relative -top-20 right-24" src={estrela04} alt="" />
-              <img className="" src={linha1} alt="" />
-              <img className="" src={linha2} alt="" />
-              <img className="relative -top-20 right-[285rem]" src={linha4} alt="" />
-
-            </div>
+          </div>
+          <div className="md:w-1/2 flex">
+            <img
+              className="relative inset-0 -top-12 max-md:top-0 max-md:left-40 -right-20 z-30 w-[42.78rem] max-md:h-[368.68px]"
+              src={celular01}
+              alt=""
+            />
+            <img
+              className="relative inset-0 -top-28 right-10 max-md:hidden"
+              src={fundo}
+              alt=""
+            />
+            <img
+              className="relative inset-0 -top-20 right-24 max-md:hidden"
+              src={estrela04}
+              alt=""
+            />
+            <img className="relative inset-0 " src={linha1} alt="" />
+            <img className="relative inset-0 " src={linha2} alt="" />
+            <img
+              className="relative inset-0 -top-20 right-[285rem]"
+              src={linha4}
+              alt=""
+            />
+          </div>
         </div>
       </SplideSlide>
       <SplideSlide className="h-[38rem]">
-      <div className="max-md:grid max-md:grid-cols-1 flex justify-center items-center pb-14 overflow-hidden bg-gradient-to-br from-[#54074C] to-[#110710]">
-            <div className="max-md:row-start-2 flex justify-center relative max-md:-top-60 -top-10 w-1/2 font-montserrat text-white">
-              <div className="ml-48 max-md:ml-20">
-                <p className="uppercase mb-3">nossos serviços</p>
-                <p className="text-4xl md:text-7xl mb-14">
-                  Sistemas sob <br />
-                  <span className="font-bold"> medida</span>
-                </p>
-                  <button className="relative z-50 hover:border-0 hover:bg-[#6D1BAC] pt-7 pb-7 pl-9 pr-9 uppercase border border-[#E8BCFF] rounded-3xl">fale com a gente</button>
+        <div className="max-md:grid max-md:grid-cols-1 max-md:grid-rows-2 md:flex md:justify-center md:items-center pb-14 overflow-hidden bg-gradient-to-br from-[#54074C] to-[#110710]">
+          <div className="max-md:row-start-2 flex justify-center relative max-md:-top-40 max-md:right-10 -top-16 md:w-1/2 font-montserrat text-white">
+            <div className="ml-48 max-md:ml-0">
+              <p className="max-md:text-xs uppercase mb-3">nossos serviços</p>
+              <p className="text-4xl md:text-7xl mb-14">
+                Sistemas sob <br />
+                <span className="font-bold"> medida</span>
+              </p>
+              <div className="max-md:border max-md:rounded-md">
+                <button className="relative z-50 max-md:flex max-md:justify-center max-md:items-center hover:border-1 md:hover:bg-[#6D1BAC] max-md:bg-violet-800 pt-7 pb-7 pl-9 pr-9 uppercase border border-[#E8BCFF] max-md:border-none rounded-3xl max-md:rounded-md max-md:m-2 max-md:w-64 max-md:h-14">
+                  fale com a gente
+                </button>
               </div>
             </div>
-            <div className="w-1/2 flex">
-              <img className="relative right-36 top-20 z-50 h-[31.39rem]" src={notebook} alt="" />
-              <img className="relative -top-52 right-80" src={linha03} alt="" />
-              <img className="relative -top-36 right-[45rem]" src={estrela04} alt="" />
-              <img className="relative top-48 right-[210rem]" src={linha2} alt="" />
-            </div>
+          </div>
+          <div className="md:w-1/2 flex">
+            <img
+              className="relative inset-0 right-36 top-20 max-md:ml-14 max-md:-top-10 z-50 h-[31.39rem] max-md:w-80"
+              src={notebook}
+              alt=""
+            />
+            <img
+              className="relative inset-0 -top-52 right-80"
+              src={linha03}
+              alt=""
+            />
+            <img
+              className="relative inset-0 -top-36 right-[45rem]"
+              src={estrela04}
+              alt=""
+            />
+            <img
+              className="relative inset-0 top-48 right-[210rem]"
+              src={linha2}
+              alt=""
+            />
+            {/* <img
+              className="absolute flex justify-center -bottom-2 right-2"
+              src={circulo}
+              alt=""
+            /> */}
+
+          </div>
         </div>
       </SplideSlide>
     </Splide>
   );
 };
 
-
 const Slide2 = () => {
   return (
-    <Splide options={{ perPage: 1, arrows: 'red' }}>
+    <Splide options={{ perPage: 1, arrows: "red" }}>
       <div className="flex text-center font-semibold text-[#8E09E3] mt-16 gap-4">
         <SplideSlide>
           <div className="flex justify-center items-center w-[12.56rem] h-[4.37rem] bg-white border rounded-3xl">
@@ -159,12 +212,10 @@ const Slide2 = () => {
             logo 8
           </div>
         </SplideSlide>
-
       </div>
     </Splide>
   );
 };
-
 
 function FloatingContainer(props) {
   const [showContainer, setShowContainer] = useState(false);
@@ -175,7 +226,9 @@ function FloatingContainer(props) {
 
   return (
     <>
-        <button className="max-md:text-xs" onClick={handleClick}>VER MAIS</button>
+      <button className="max-md:text-xs" onClick={handleClick}>
+        VER MAIS
+      </button>
       {showContainer && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-30 flex justify-center items-center">
           <div className="bg-[#0B002B] bg-opacity-90 w-[84.5rem] h-[50.62rem] rounded-3xl p-5 relative max-md:w-[23rem]">
@@ -187,25 +240,33 @@ function FloatingContainer(props) {
             </button>
             <div className="flex max-md:flex-col mt-10 max-md:mt-5 ml-24 max-md:ml-0">
               <div className="md:w-2/3 max-md:w-full text-left space-y-8 max-md:space-y-4">
-                <h1 className="text-white text-5xl font-extrabold mb-4 max-md:text-2xl">{props.titulo}</h1>
+                <h1 className="text-white text-5xl font-extrabold mb-4 max-md:text-2xl">
+                  {props.titulo}
+                </h1>
                 <p className="text-white text-2xl max-md:text-base mb-4 font-medium">
                   {props.text1}
                 </p>
                 <p className="text-white text-2xl mb-4 font-light max-md:text-sm">
-                {props.text2}
+                  {props.text2}
                 </p>
                 <div>
-                  <button src="#" className="relative z-50 w-[21.25rem] h-[5.75rem] max-md:w-[19rem] max-md:h-[4rem] text-2xl max-md:text-lg font-bold bg-gradient-to-b from-custom-purple1 to-custom-purple2 text-white px-4 py-2 rounded-lg mr-4 mt-5">
+                  <button
+                    src="#"
+                    className="relative z-50 w-[21.25rem] h-[5.75rem] max-md:w-[19rem] max-md:h-[4rem] text-2xl max-md:text-lg font-bold bg-gradient-to-b from-custom-purple1 to-custom-purple2 text-white px-4 py-2 rounded-lg mr-4 mt-5"
+                  >
                     FAÇA UM ORÇAMENTO
                   </button>
-
                 </div>
               </div>
               <div className="md:w-1/3 mt-12 max-md:pl-20 overflow-hidden">
                 <div className="rounded-3xl ml-20 max-md:ml-0 w-[15rem] h-[31.06rem] bg-gradient-to-b from-[#75319B] to-[#4C0087] hover:bg-purple-950 max-md:rotate-90 max-md:relative max-md:-top-8 max-md:w-[10rem] max-md:h-[18rem]">
                   <img className="" src={bgFixed} alt="Imagem" />
                 </div>
-                <img className="md:animate-bounce relative -top-80 -right-9 max-md:-top-72 max-md:right-14 w-[18.62rem] h-[15.42rem] max-md:min-w-[15rem]" src={props.image} alt="" />
+                <img
+                  className="md:animate-bounce relative -top-80 -right-9 max-md:-top-72 max-md:right-14 w-[18.62rem] h-[15.42rem] max-md:min-w-[15rem]"
+                  src={props.image}
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -215,27 +276,19 @@ function FloatingContainer(props) {
   );
 }
 
-
-
 const App = () => (
   <div className="w-full aspect-auto font-montserrat bg-white overflow-hidden text-black">
     {/* 1 */}
     <header className="flex justify-between w-full z-50 h-28 items-center bg-custom-blue fixed top-0 2xl:pl-64 2xl:pr-64  whitespace-nowrap ">
-      <div className="flex items-center gap-5 md:gap-2 text-center mr-5">
-        <img className="w-10" src={estrela03} alt="" />
-        <img className="min-w-[210px] max-w-[260px]" src={x7} alt="" />
+      <div className="flex items-center gap-5 md:gap-2 text-center mr-5 max-md:ml-8">
+        <img className="w-10 max-md:w-8 " src={estrela03} alt="" />
+        <img className="min-w-[210px] max-w-[260px] max-md:min-w-[9rem] max-md:max-w-[11rem]" src={x7} alt="" />
       </div>
 
       <nav className="hidden md:block">
-        <div className="flex items-center xl:gap-9 md:gap-3 ml-28 md:ml-10 mr-20 md:mr-10 text-white text-xl md:text-sm">
+        <div className="flex items-center xl:gap-9 md:gap-3 ml-28 md:ml-10 mr-20 md:mr-10 text-white md:text-xl">
           <div className="flex items-center h-16 hover:border-b-2 hover:text-[#A580FF] hover:border-[#A580FF]">
-            <Link
-              to="home"
-              smooth={true}
-              duration={500}
-              className=""
-              href=""
-            >
+            <Link to="home" smooth={true} duration={500} className="" href="">
               Home
             </Link>
           </div>
@@ -251,35 +304,17 @@ const App = () => (
             </Link>
           </div>
           <div className="flex items-center h-16 hover:border-b-2 hover:text-[#A580FF] hover:border-[#A580FF]">
-            <Link
-              to="abount"
-              smooth={true}
-              duration={500}
-              className=""
-              href=""
-            >
+            <Link to="abount" smooth={true} duration={500} className="" href="">
               Sobre a X7
             </Link>
           </div>
           <div className="flex items-center h-16 hover:border-b-2 hover:text-[#A580FF] hover:border-[#A580FF]">
-            <Link
-              to="acting"
-              smooth={true}
-              duration={500}
-              className=""
-              href=""
-            >
+            <Link to="acting" smooth={true} duration={500} className="" href="">
               Atuação
             </Link>
           </div>
           <div className="flex items-center h-16 hover:border-b-2 hover:text-[#A580FF] hover:border-[#A580FF]">
-            <Link
-              to="speak"
-              smooth={true}
-              duration={500}
-              className=""
-              href=""
-            >
+            <Link to="speak" smooth={true} duration={500} className="" href="">
               Fale com a gente
             </Link>
           </div>
@@ -500,7 +535,10 @@ const App = () => (
         que tem se destacado no mercado graças à sua experiência e inovação.
       </p>
 
-      <p className="flex items-center justify-center font-light text-black text-center text-2xl max-md:text-lg mt-4 max-md:mt-8">
+      <p
+        id="acting"
+        className="flex items-center justify-center font-light text-black text-center text-2xl max-md:text-lg mt-4 max-md:mt-8"
+      >
         Desde sua fundação, a empresa tem se dedicado ao desenvolvimento de
         <br />
         soluções tecnológicas que atendam ás necessidades de seus clientes.
@@ -585,7 +623,7 @@ const App = () => (
       </div>
     </div>
     {/* 6 */}
-    <section id="acting">
+    <section>
       <div className="flex justify-center text-center relative -top-16 max-md:-top-30">
         <img src={barra} alt="" />
       </div>
@@ -877,4 +915,4 @@ const App = () => (
   </div>
 );
 
-  export default App
+export default App;
