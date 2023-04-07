@@ -493,9 +493,9 @@ const App = () => (
         </article>
       </div>
 
-      <div className="w-full flex justify-center relative z-10 rounded-3xl">
+      <div className="w-full flex justify-center items-center relative z-10 rounded-3xl">
         <div className="w-[75.75rem] h-[16rem] max-md:w-[330px] max-md:h-[326px] bg-black overflow-hidden rounded-3xl">
-          <div className="relative">
+          <div className="md:relative">
             <img
               className="absolute object-cover max-md:hidden"
               src={bg}
@@ -507,7 +507,7 @@ const App = () => (
               alt=""
             />
             <img className="absolute max-md:hidden" src={bg2} alt="" />
-            <img className="hidden max-md:block absolute " src={bg03} alt="" />
+            <img className="hidden max-md:block absolute w-[65.38rem]" src={bg03} alt="" />
           </div>
           <div className="flex relative text-white mt-[4.31rem] ml-[4.31rem]">
             <div className="text-4xl">
@@ -624,7 +624,7 @@ const App = () => (
           <br className="hidden max-md:block" />{" "}
           <span className="font-bold"> X7 Tecnologia</span>
         </p>
-        <div className="container mx-auto">
+        <div className="">
           <LogosSlider />
         </div>
       </div>

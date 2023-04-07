@@ -61,13 +61,29 @@ form div label {
     left: 0em;
 }
 
+.splide__list {
+  @apply mx-5
+}
+
+.splide__pagination__page {
+  border: 3px solid #B209E3;
+  width: 15px;
+  height: 15px;
+  background: #6709E3;
+}
+
+.splide__pagination {
+}
+
+.splide__slide img {
+  @apply mx-0 flex justify-center items-center
+}
+/* .px-20 {
+  @apply max-md:px-0
+} */
 /* Estilize as setas de navegação quando estão desabilitadas 
 .splide__arrow--prev.splide__arrow--disabled,
 .splide__arrow--next.splide__arrow--disabled {
   opacity: 0.5; /* Defina a opacidade desejada 
 } */
 
-.custom-slide {
-  margin-right: -10px; /* Defina a margem desejada */
-  margin-left: 50px; /* Defina a margem desejada */ 
-}
