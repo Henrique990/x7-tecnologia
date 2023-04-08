@@ -41,7 +41,7 @@ form div img {
 }
 
 form div input {
-  @apply w-full h-[4.2rem] max-md:h-[1.7rem] rounded-xl
+  @apply w-full h-[4.2rem] max-md:h-[1.7rem] rounded-xl mx-4
 }
 
 form div label {

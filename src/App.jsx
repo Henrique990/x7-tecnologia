@@ -60,6 +60,7 @@ import estrelax72 from "./assets/estrelax7-2.svg";
 import notebookpng from "./assets/Imagem 28.png";
 import circulo from "./assets/icons/circulo.svg";
 import menu from "./assets/icons/menu.svg";
+import linha04 from "./assets/Vector 5.png";
 
 // import { Splide, SplideSlide } from "@splidejs/react-splide";
 
@@ -137,7 +138,7 @@ const Slide = () => {
               src={estrela04}
               alt=""
             />
-            <img className="absolute inset-0 left-[-280px] top-[-124px] max-md:left-[-227px] max-md:top-[-110px] max-md:min-w-[70rem] -rotate-6 max-md:-rotate-12" src={linha1} alt="" />
+            <img className="absolute inset-0 left-[-280px] top-[-343px] max-md:left-[-227px] max-md:top-[-110px] max-md:min-w-[70rem] rotate-[-30deg] max-md:-rotate-12" src={linha1} alt="" />
             <img className="absolute max-md:invisible inset-0 top-[466px] left-28 -rotate-6" src={linha2} alt="" />
             <img
               className="relative inset-0 -top-20 right-[285rem]"
@@ -354,10 +355,6 @@ const App = () => (
 
       <Menu />
 
-      <nav>
-        <button id="menuBotton" type="button" className="hover:bg-slate-600 hover:rounded-xl">
-        </button>
-      </nav>
 
 
       
@@ -530,7 +527,7 @@ const App = () => (
         </article>
       </div>
 
-      <div className="w-full flex justify-center items-center relative z-10 overflow-hidden rounded-3xl">
+      <div className="max-md:hidden flex justify-center items-center relative z-10 overflow-hidden rounded-3xl">
         <div className="w-[75.75rem] h-[16rem] max-md:w-[330px] max-md:h-[326px] bg-black overflow-hidden rounded-3xl">
           <div className="md:relative">
             <img
@@ -560,9 +557,28 @@ const App = () => (
           </div>
         </div>
       </div>
+
+      <div className="md:hidden flex justify-center items-center relative z-50 bg-[#12152E] mx-7 h-96 rounded-3xl overflow-hidden">
+        <div className="text-white z-50 flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center relative top-[-20px] space-y-1">
+            <p className="text-[#F951FF]">X7 TECNOLOGIA</p>
+            <p className="font-bold text-3xl">Fale coma a gente</p>
+            <p className="font-semibold text-xl">Temos uma solução para você.</p>
+          </div>
+          <div className="flex justify-center items-center rounded-lg mt-14 w-56 h-16 bg-gradient-to-b from-custom-purple1 to-custom-purple2">
+            <button className="z-50">PEÇA UM ORÇAMENTO</button>            
+          </div>
+        </div>
+        <div className="">
+          <img className="absolute z-10 left-[-190px] top-[-156px] min-w-[74rem] " src={bg03} alt="" />
+          <img className="absolute left-0 top-[55px] rounded-3xl opacity-60" src={celular02} alt="" />
+        </div>
+      </div>    
+
     </section>
     {/* 4 */}
     <section id="abount" className="relative -top-[12rem] bg-[#F2F2F9]">
+      <img className="absolute rotate-[-33deg] top-[-251px] left-[-400px] " src={linha04} alt="" />
       <div className="flex items-center justify-center mt-20 mb-11">
         <img className="mt-48" src={barra} alt="" />
       </div>
@@ -647,14 +663,14 @@ const App = () => (
       </div>
       <div className="relative">
         <img
-          className="absolute -top-[43rem] -right-[35rem]"
-          src={linha03}
+          className="absolute top-[-35rem] left-[114rem]"
+          src={estrela04}
           alt=""
         />
       </div>
     </section>
     {/* 5 */}
-    <div className="max-md:w-full flex justify-center relative -top-[12rem] h-custom-baner2 text-white text-3xl max-md:text-2xl bg-gradient-to-r from-custom-purple1 to-custom-purple2 ">
+    <div className="max-md:w-full flex justify-center relative z-50 -top-[12rem] h-custom-baner2 text-white text-3xl max-md:text-2xl bg-gradient-to-r from-custom-purple1 to-custom-purple2 ">
       <div className="mt-16">
         <p className="text-center font-light">
           Empresas que confiam na
@@ -668,6 +684,7 @@ const App = () => (
     </div>
     {/* 6 */}
     <section>
+      <img className="absolute rotate-[30deg] top-[3566px] left-[1115px] " src={linha04} alt="" />
       <div className="flex justify-center text-center relative -top-16 max-md:-top-30">
         <img src={barra} alt="" />
       </div>
@@ -743,6 +760,7 @@ const App = () => (
     </section>
     {/* 7 */}
     <section id="speak" className="bg-[#1C214A]">
+      <img className="absolute rotate-[210deg] top-[5282px] left-[-160px] max-md:rotate-[210deg] max-md:top-[5321px] max-md:left-[-161px] max-md:min-w-[1312px]" src={linha04} alt="" />
       <div className="flex justify-center ">
         <img className="mt-[4.71rem] mb-[4.61rem]" src={barra} alt="" />
       </div>
@@ -754,7 +772,7 @@ const App = () => (
         Fale com a gente
       </div>
 
-      <div className="flex justify-center pb-52">
+      <div className="flex justify-center pb-52 relative z-50">
         <div className="flex justify-center">
           <div className="max-md:hidden flex justify-center items-center rounded-l-3xl bg-gradient-to-b from-custom-purple1 to-custom-purple2 w-[20.93rem] h-[44.75rem]">
             <div>
@@ -791,7 +809,7 @@ const App = () => (
                 action=""
               >
                 <div className="flex items-center overflow-hidden max-md:flex-col border-2 border-[#1C214A] rounded-2xl max-md:rounded-3xl w-[39.91rem] h-[4.78rem] max-md:w-[20rem] max-md:h-[4rem] max-md:ml-1">
-                  <div className="max-md:flex max-md:mr-56 max-md:mt-2">
+                  <div className="flex max-md:flex max-md:mr-56 max-md:mt-2">
                     <img src={persona} alt="" />
                     <label className="font-bold" htmlFor="nome">
                       Nome
@@ -800,7 +818,7 @@ const App = () => (
                   <input className="bg-white" type="text" name="name" id="" />
                 </div>
                 <div className="flex items-center overflow-hidden max-md:flex-col border-2 border-[#1C214A] rounded-2xl max-md:rounded-3xl w-[39.91rem] h-[4.78rem] max-md:w-[20rem] max-md:h-[4rem] max-md:ml-1">
-                  <div className="max-md:flex max-md:mr-56 max-md:mt-2 ml-8">
+                  <div className="flex max-md:flex max-md:mr-56 max-md:mt-2 ml-8 md:ml-0">
                     <img src={mensagem} alt="" />
                     <label className="font-bold w-20" htmlFor="E-mail">
                       E-mail
@@ -809,7 +827,7 @@ const App = () => (
                   <input className="bg-white" type="email" />
                 </div>
                 <div className="flex items-center overflow-hidden max-md:flex-col border-2 border-[#1C214A] rounded-2xl max-md:rounded-3xl w-[39.91rem] h-[4.78rem] max-md:w-[20rem] max-md:h-[4rem] max-md:ml-1">
-                  <div className="max-md:flex max-md:mr-56 max-md:mt-2 ml-6">
+                  <div className="flex max-md:flex max-md:mr-56 max-md:mt-2 ml-6 md:ml-0">
                     <img src={celular} alt="" />
                     <label className="font-bold" htmlFor="phone">
                       Telefone
@@ -818,9 +836,9 @@ const App = () => (
                   <input className="bg-white" type="number" />
                 </div>
                 <div className="flex flex-col max-md:overflow-hidden items-center border-2 border-[#1C214A] rounded-2xl max-md:rounded-3xl w-[39.91rem] h-[8.60rem] max-md:w-[20rem] max-md:ml-1">
-                  <div className="max-md:flex">
+                  <div className="flex max-md:flex md:relative md:left-[-89px]">
                     <img src={conversa} alt="" />
-                    <label className="font-bold" htmlFor="message">
+                    <label className="font-bold " htmlFor="message">
                       Fale um pouco sobre o que precisa:<span>(opcional)</span>
                     </label>
                   </div>
@@ -855,7 +873,7 @@ const App = () => (
       </div>
     </section>
     {/* 8 */}
-    <footer className="bg-[#12152E] pt-20">
+    <footer className="bg-[#12152E] pt-20 relative z-10">
       <div className="flex justify-center max-md:flex-col gap-20 max-md:gap-5 pb-9">
         <div>
           <div className="md:hidden flex justify-center">
