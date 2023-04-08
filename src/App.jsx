@@ -26,7 +26,7 @@ import verificado from "./assets/icons/verificado-rosa.svg";
 import fundo from "./assets/fundo-neon.svg";
 import estrela04 from "./assets/estrela04.svg";
 import linha1 from "./assets/Vector 5.png";
-import linha2 from "./assets/icons/Vector 6.svg";
+import linha2 from "./assets/icons/Vector 6.png";
 import seta1 from "./assets/Grupo 130.svg";
 import seta2 from "./assets/Grupo 131.svg";
 import seta3 from "./assets/Grupo 132.svg";
@@ -59,6 +59,7 @@ import whatsapp from "./assets/icons/whatsapp.png";
 import estrelax72 from "./assets/estrelax7-2.svg";
 import notebookpng from "./assets/Imagem 28.png";
 import circulo from "./assets/icons/circulo.svg";
+import menu from "./assets/icons/menu.svg";
 
 // import { Splide, SplideSlide } from "@splidejs/react-splide";
 
@@ -66,6 +67,29 @@ import circulo from "./assets/icons/circulo.svg";
 // import "@splidejs/splide/dist/css/splide.min.css";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css'; // Importe o arquivo CSS da biblioteca Splide
+
+function Menu() {
+  const [hidden, setHidden] = useState(true);
+
+  return (
+    <div>
+      <button className="md:hidden mx-5" onClick={() => setHidden(!hidden)}>
+        <img id="" className="w-8" src={menu} alt="" />
+      </button>
+      <div className={hidden ? 'hidden' : ''}>
+        <div className="w-full z-50 top-24 left-0 bg-black opacity-80 fixed">
+          <div className="flex flex-col mx-5 my-5 text-white space-y-3 font-bold">
+            <Link to="home" className="hover:bg-slate-500 rounded-lg" href="">Home</Link>
+            <Link to="services" className="hover:bg-slate-500 rounded-lg" href="">Serviços</Link>
+            <Link to="abount" className="hover:bg-slate-500 rounded-lg" href="">Sobre a X7</Link>
+            <Link to="acting" className="hover:bg-slate-500 rounded-lg" href="">Atuação</Link>
+            <Link to="speak" className="hover:bg-slate-500 rounded-lg" href="">Fale com a gente</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const Slide = () => {
 
@@ -81,7 +105,7 @@ const Slide = () => {
       options={{ autoplay: true, interval: 1000000, type: "loop", perPage: 1, arrowStyle:{arrowstyle}
     }}
     >
-      <SplideSlide>
+      <SplideSlide className="relative overflow-hidden z-50">
         <div className="max-md:grid max-md:grid-cols-1 max-md:grid-rows-2 max-md:h-[680px] md:flex md:justify-center md:items-center overflow-hidden bg-custom-blue">
           <div className="max-md:row-start-2 flex justify-center md:w-1/2 font-montserrat text-white">
             <div className="ml-0 md:ml-72">
@@ -104,17 +128,17 @@ const Slide = () => {
               alt=""
             />
             <img
-              className="relative inset-0 -top-28 right-10 max-md:hidden"
+              className="max-md:invisible relative inset-0 -top-28 -left-28 "
               src={fundo}
               alt=""
             />
             <img
-              className="relative inset-0 -top-20 right-24 max-md:hidden"
+              className="max-md:hidden relative inset-0 -top-20 -left-24 "
               src={estrela04}
               alt=""
             />
-            <img className="relative inset-0 " src={linha1} alt="" />
-            <img className="relative inset-0 " src={linha2} alt="" />
+            <img className="absolute inset-0 left-[-280px] top-[-124px] max-md:left-[-227px] max-md:top-[-110px] max-md:min-w-[70rem] -rotate-6 max-md:-rotate-12" src={linha1} alt="" />
+            <img className="absolute max-md:invisible inset-0 top-[466px] left-28 -rotate-6" src={linha2} alt="" />
             <img
               className="relative inset-0 -top-20 right-[285rem]"
               src={linha4}
@@ -123,9 +147,9 @@ const Slide = () => {
           </div>
         </div>
       </SplideSlide>
-      <SplideSlide className="h-[38rem]">
-        <div className="max-md:grid max-md:grid-cols-1 max-md:grid-rows-2 md:flex md:justify-center md:items-center pb-14 overflow-hidden bg-gradient-to-br from-[#54074C] to-[#110710]">
-          <div className="max-md:row-start-2 flex justify-center relative max-md:-top-40 max-md:right-10 -top-16 md:w-1/2 font-montserrat text-white">
+      <SplideSlide className="relative h-[39rem] max-md:h-[42.5rem]  bg-gradient-to-br from-[#54074C] to-[#110710]">
+        <div className="max-md:grid max-md:grid-cols-1 max-md:grid-rows-2 md:flex md:justify-center md:items-center pb-14">
+          <div className="max-md:row-start-2 flex justify-center relative max-md:top-24 max-md:right-5 top-32 md:w-1/2 font-montserrat text-white">
             <div className="ml-48 max-md:ml-0">
               <p className="max-md:text-xs uppercase mb-3">nossos serviços</p>
               <p className="text-4xl md:text-7xl mb-14">
@@ -141,22 +165,22 @@ const Slide = () => {
           </div>
           <div className="md:w-1/2 flex">
             <img
-              className="relative inset-0 right-36 top-20 max-md:ml-14 max-md:-top-10 z-50 h-[31.39rem] max-md:w-80"
+              className="absolute inset-0 left-[750px] top-20 max-md:left-12 max-md:ml-14 max-md:-top-14 z-50 h-[31.39rem] max-md:w-80"
               src={notebook}
               alt=""
             />
             <img
-              className="relative inset-0 -top-52 right-80"
+              className=" absolute inset-0 -top-96 left-[1100px] max-md:left-5 max-md:-top-[470px] max-md:rotate-45 max-md:min-w-[1236px]" 
               src={linha03}
               alt=""
             />
             <img
-              className="relative inset-0 -top-36 right-[45rem]"
+              className="absolute max-md:hidden inset-0 -top-10 left-[113rem]"
               src={estrela04}
               alt=""
             />
             <img
-              className="relative inset-0 top-48 right-[210rem]"
+              className="absolute max-md:invisible inset-0 top-[410px] -left-[500px]"
               src={linha2}
               alt=""
             />
@@ -292,7 +316,7 @@ const App = () => (
         <img className="min-w-[210px] max-w-[260px] max-md:min-w-[9rem] max-md:max-w-[11rem]" src={x7} alt="" />
       </div>
 
-      <nav className="hidden md:block">
+      <nav className="max-md:hidden">
         <div className="flex items-center xl:gap-9 md:gap-3 ml-28 md:ml-10 mr-20 md:mr-10 text-white md:text-xl">
           <div className="flex items-center h-16 hover:border-b-2 hover:text-[#A580FF] hover:border-[#A580FF]">
             <Link to="home" smooth={true} duration={500} className="" href="">
@@ -328,10 +352,23 @@ const App = () => (
         </div>
       </nav>
 
+      <Menu />
+
+      <nav>
+        <button id="menuBotton" type="button" className="hover:bg-slate-600 hover:rounded-xl">
+        </button>
+      </nav>
+
+
+      
+
+
+
       <button className="ml-5 mr-5 hover:bg-gradient-to-r hover:from-custom-purple2 hover:to-custom-purple1 z-30 rounded-3xl border-[#707070] text-md xl:text-base px-7 py-5 text-white bg-gradient-to-b from-custom-purple1 to-custom-purple2 hidden lg:block">
         PEÇA UM ORÇAMENTO
       </button>
     </header>
+
     {/* 2 */}
     <section id="home" className="w-full h-custom-section1 pt-28">
       <Slide />
@@ -493,7 +530,7 @@ const App = () => (
         </article>
       </div>
 
-      <div className="w-full flex justify-center items-center relative z-10 rounded-3xl">
+      <div className="w-full flex justify-center items-center relative z-10 overflow-hidden rounded-3xl">
         <div className="w-[75.75rem] h-[16rem] max-md:w-[330px] max-md:h-[326px] bg-black overflow-hidden rounded-3xl">
           <div className="md:relative">
             <img
