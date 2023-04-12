@@ -29,39 +29,37 @@ const LogosSlider = () => {
     };
   
     return (
-      <Splide className='md:px-20 space-x-0' options={window.innerWidth >= 800 ? desktopOptions : mobileOptions}>
+      <Splide className='px-10 py-10 md:px-20' options={window.innerWidth >= 800 ? desktopOptions : mobileOptions}>
           <SplideSlide className='flex justify-center items-center  '>
-          <img className='md:w-full md:h-full object-cover mt-10' src={logo} alt='' />
-          </SplideSlide>
-          <SplideSlide className='flex justify-center items-center max-md:overflow-hidden'>
-          <img className='md:w-full md:h-full object-cover mt-10' src={logo} alt='' />
+          <img className='w-full h-full object-cover mt-5' src={logo} alt='' />
           </SplideSlide>
           <SplideSlide className='flex justify-center items-center'>
-          <img className='md:w-full md:h-full object-cover mt-10' src={logo} alt='' />
+          <img className='w-full h-full object-cover mt-5' src={logo} alt='' />
           </SplideSlide>
           <SplideSlide className='flex justify-center items-center'>
-          <img className='md:w-full md:h-full object-cover mt-10' src={logo} alt='' />
+          <img className='w-full h-full object-cover mt-5' src={logo} alt='' />
           </SplideSlide>
           <SplideSlide className='flex justify-center items-center'>
-          <img className='md:w-full md:h-full object-cover mt-10' src={logo} alt='' />
+          <img className='w-full h-full object-cover mt-5' src={logo} alt='' />
           </SplideSlide>
           <SplideSlide className='flex justify-center items-center'>
-          <img className='md:w-full md:h-full object-cover mt-10' src={logo} alt='' />
+          <img className='w-full h-full object-cover mt-5' src={logo} alt='' />
           </SplideSlide>
           <SplideSlide className='flex justify-center items-center'>
-          <img className='md:w-full md:h-full object-cover mt-10' src={logo} alt='' />
+          <img className='w-full h-full object-cover mt-5' src={logo} alt='' />
           </SplideSlide>
           <SplideSlide className='flex justify-center items-center'>
-          <img className='md:w-full md:h-full object-cover mt-10' src={logo} alt='' />
+          <img className='w-full h-full object-cover mt-5' src={logo} alt='' />
           </SplideSlide>
           <SplideSlide className='flex justify-center items-center'>
-          <img className='md:w-full md:h-full object-cover mt-10' src={logo} alt='' />
+          <img className='w-full h-full object-cover mt-5' src={logo} alt='' />
           </SplideSlide>
           <SplideSlide className='flex justify-center items-center'>
-          <img className='md:w-full md:h-full object-cover mt-10' src={logo} alt='' />
+          <img className='w-full h-full object-cover mt-5' src={logo} alt='' />
           </SplideSlide>
-
-          
+          <SplideSlide className='flex justify-center items-center'>
+          <img className='w-full h-full object-cover mt-5' src={logo} alt='' />
+          </SplideSlide>
       </Splide>
     );
   };
